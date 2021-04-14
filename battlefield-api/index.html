@@ -1,31 +1,31 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8" />
-		<title>SakuraKooi's Battlefield 1 API</title>
-
-		<script type="text/javascript" src="assets/json-viewer.js"></script>
-		<link rel="stylesheet" type="text/css" href="assets/json-viewer.css">
-	</head>
+<head>
+    <meta charset="utf-8"/>
+    <title>SakuraKooi's Battlefield 1 API</title>
+    
+    <script type="text/javascript" src="assets/json-viewer.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/json-viewer.css">
+</head>
 <body>
-	<div id="json"></div>
-	<script>
-		var jsonObj = {};
-		var jsonViewer = new JSONViewer();
-		document.querySelector("#json").appendChild(jsonViewer.getContainer());
+    <div id="json"></div>
+    <script>
+        var jsonObj = {};
+        var jsonViewer = new JSONViewer();
+        document.querySelector("#json").appendChild(jsonViewer.getContainer());
         fetch('https://battlefield-api.sakurakooi.workers.dev/banner.json')
-            .then((res)=> {
+            .then((res) => {
                 return res.text();
-        })  
-        .then((data) => {
-            jsonViewer.showJSON(JSON.parse(data));
-        })
-        .catch((err) => {
-            jsonViewer.showJSON({
-                "error": "An error occurred while loading data"
-            });
-            console.log(err);
-        })
-	</script>
-	</body>
+            })
+            .then((data) => {
+                jsonViewer.showJSON(JSON.parse(data));
+            })
+            .catch((err) => {
+                jsonViewer.showJSON({
+                    "error": "An error occurred while loading data"
+                });
+                console.log(err);
+            })
+    </script>
+</body>
 </html>
