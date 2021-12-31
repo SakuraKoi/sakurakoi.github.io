@@ -72,18 +72,7 @@
             });
         });
     }
-    
-    
-    function injectGoogleTag() {
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'UA-179541658-1');
-        
-        loadScript("https://www.googletagmanager.com/gtag/js?id=UA-179541658-1", function () {});
-    }
     registerLoadingAnimation();
     injectBackground();
     injectParticles();
-    injectGoogleTag();
 }(jQuery);
