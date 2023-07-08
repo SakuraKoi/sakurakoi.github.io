@@ -13,7 +13,7 @@
         var jsonObj = {};
         var jsonViewer = new JSONViewer();
         document.querySelector("#json").appendChild(jsonViewer.getContainer());
-        fetch('https://battlefield-api.sakurakooi.workers.dev/banner.json')
+        fetch('https://battlefield-api.sakurakooi.dev/banner.json')
             .then((res) => {
                 return res.text();
             })
